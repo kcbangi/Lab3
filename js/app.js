@@ -13,6 +13,8 @@ if (user === 'Yes' || user === 'Yes'.toLowerCase() || user === 'Y'.toLowerCase()
   alert('Ding! Ding! Ding! Wrong answer.');
 }
 
+var correctAnswers = [];
+
 //First Question
 alert('First question, this is going to test your math skills');
 var q1 = prompt('What is the sum of 1 + 1 - 1 + 1 - 1 + 1 - 1 - 1 + 1 + 1 - 1?');
@@ -21,6 +23,7 @@ while (q1 !== '1') {
 }
 console.log('Math skills in a while Loop');
 alert('Good job!');
+correctAnswers.push('q1');
 
 //Second question
 var q2 = prompt('Question dos: Can you dream and snore at the same time?');
@@ -28,6 +31,7 @@ var q2 = prompt('Question dos: Can you dream and snore at the same time?');
 if (q2 === 'No' || q2 === 'No'.toLowerCase() || q2 === 'N'.toLowerCase() || q2 === 'No'.toUpperCase()) {
   console.log('if else');
   alert('Thats correct! According to the research you cant snore and dream at the same time.');
+  correctAnswers.push('q2');
 } else {
   alert('Fun fact, you cant dream and snore at the same time.');
 }
@@ -38,12 +42,14 @@ do {
 } while (q3 === 'True' || q3 === 'True'.toLowerCase() || q3 === 'T'.toLowerCase() || q3 === 'True'.toUpperCase());
 console.log('do whole workout');
 alert('That is correct, banging your head against the wall can burn 150 calories an hour.');
+correctAnswers.push('q3');
 
 //Fourth Question
 var q4 = prompt('Question four: True or False. A "buttload" is a real measurement of weight?');
 if (q4 === 'True' || q4 === 'True'.toLowerCase() || q4 === 'T'.toLowerCase() || q4 === 'True'.toLowerCase()) {
   console.log('if else buttload');
   alert('That is correct, according to research "buttload" is a real weight measurement. ');
+  correctAnswers.push('q4');
 } else{
   alert('True! buttload is a real weight measurement according to reaserch.');
 }
@@ -53,4 +59,35 @@ var q5 = prompt('Question five, who is the most awesome person in the galaxy? (H
 while (q5 !== 'Keith') {
   q5 = prompt('Wrong, try again.');
 }
+alert('Nice one');
 console.log('While Loop');
+correctAnswers.push('q5');
+
+//Sixth Question
+var q6 = prompt('How many countries have I been to?');
+for(var x = 4; x >= 0; x--) {
+    if (q6 > 6){
+        var q6 = prompt ('lower..');
+    } else if (q6 < 6) {
+        var q6 = prompt ('higher..');
+    } else if (q6 === '6') {
+        alert('Ding! Ya got it');
+        correctAnswers.push('q6');
+        {break;}
+    }else 
+        prompt('try again');
+}
+
+//Seventh Question
+var countries = ['Philippines', 'Hawaii', 'Japan', 'Korea', 'Guam', 'America'];
+var q7 = prompt('Can you guess the counties I been to?');
+for(var y = 6; y > 1; y--) {
+  if (countries.indexOf(q7) >= 0) {
+      var q7 = prompt('Yes');
+      correctAnswers.push('q7');
+  } else{
+      var q7 = prompt('I wish')
+  }
+}
+
+alert('Thank you for taking the time answering the questions ' + username + '. Your got a total score of ' + correctAnswers.length + '.');
