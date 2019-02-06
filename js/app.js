@@ -90,6 +90,6 @@ for(var y = 3; y >= 1; y--) {
   } else{
       var q7 = prompt('No, try again..')
   }
-}
+}alert('The 6 countries I\'ve been to is posted on the bottom of my profile.')
 
 alert('Thank you for taking the time answering the questions ' + username + '. Your got a total score of ' + correctAnswers.length + '.');
