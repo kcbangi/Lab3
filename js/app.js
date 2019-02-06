@@ -4,7 +4,7 @@ var username = prompt('Welcome! Before I take you to my profile, Lets play a qui
 console.log(username);
 
 //Identify user
-var user = prompt('Hi ' + username + ', I will be asking you 5 random questions. Are you ready?');
+var user = prompt('Hi ' + username + ', I will be asking you random questions. Are you ready?');
 
 if (user === 'Yes' || user === 'Yes'.toLowerCase() || user === 'Y'.toLowerCase() || user === 'Yes'.toUpperCase()) {
   console.log('Question 1');
@@ -16,14 +16,16 @@ if (user === 'Yes' || user === 'Yes'.toLowerCase() || user === 'Y'.toLowerCase()
 var correctAnswers = [];
 
 //First Question
-alert('First question, this is going to test your math skills');
-var q1 = prompt('What is the sum of 1 + 1 - 1 + 1 - 1 + 1 - 1 - 1 + 1 + 1 - 1?');
-while (q1 !== '1') {
-  q1 = prompt('Wrong, try again. \n 1 + 1 - 1 + 1 - 1 + 1 - 1 - 1 + 1 + 1 - 1?');
+var q1 = prompt('First question, this is going to test your math skills \nWhat is the sum of 1 + 1 - 1 + 1 - 1 + 1 - 1 - 1 + 1 + 1 - 1?');
+
+if (q1 = '1') {
+  console.log('if else');
+  alert('1 + 1 - 1 + 1 - 1 + 1 - 1 - 1 + 1 + 1 - 1 = 1');
+  correctAnswers.push('q1');
+} else {
+  alert('Wrong. The correct answer is 1');
 }
-console.log('Math skills in a while Loop');
-alert('Good job!');
-correctAnswers.push('q1');
+
 
 //Second question
 var q2 = prompt('Question dos: Can you dream and snore at the same time?');
@@ -57,15 +59,15 @@ if (q4 === 'True' || q4 === 'True'.toLowerCase() || q4 === 'T'.toLowerCase() || 
 //Fifth Question
 var q5 = prompt('Question five, who is the most awesome person in the galaxy? (Hint : Keith)');
 while (q5 !== 'Keith') {
-  q5 = prompt('Wrong, try again.');
+  q5 = prompt('Wrong, try again.(hint: Keith)');
 }
 alert('Nice one');
 console.log('While Loop');
 correctAnswers.push('q5');
 
 //Sixth Question
-var q6 = prompt('How many countries have I been to?');
-for(var x = 4; x >= 0; x--) {
+var q6 = prompt('Can you guess how many countries I have been?');
+for(var x = 3; x > 1; x--) {
     if (q6 > 6){
         var q6 = prompt ('lower..');
     } else if (q6 < 6) {
@@ -80,13 +82,13 @@ for(var x = 4; x >= 0; x--) {
 
 //Seventh Question
 var countries = ['Philippines', 'Hawaii', 'Japan', 'Korea', 'Guam', 'America'];
-var q7 = prompt('Can you guess the counties I been to?');
-for(var y = 6; y > 1; y--) {
-  if (countries.indexOf(q7) >= 0) {
-      var q7 = prompt('Yes');
+var q7 = prompt('I have been to 6 countries. Can you name the counties I\'ve been to?');
+for(var y = 3; y >= 1; y--) {
+  if (countries.indexOf(q7.toLowerCase()) >= 0) {
+      var q7 = prompt('Yes! And?');
       correctAnswers.push('q7');
   } else{
-      var q7 = prompt('I wish')
+      var q7 = prompt('No, try again..')
   }
 }
 
