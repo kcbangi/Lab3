@@ -83,8 +83,8 @@ for(var x = 3; x > 1; x--) {
 //Seventh Question
 var countries = ['Philippines', 'Hawaii', 'Japan', 'Korea', 'Guam', 'America'];
 var q7 = prompt('I have been to 6 countries. Can you name the counties I\'ve been to?');
-for(var y = 3; y >= 1; y--) {
-  if (countries.indexOf(q7.toLowerCase()) >= 0) {
+for(var y = 6; y >= 1; y--) {
+  if (countries.indexOf(q7) >= 0) {
       var q7 = prompt('Yes! And?');
       correctAnswers.push('q7');
   } else{
